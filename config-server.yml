@@ -1,0 +1,23 @@
+spring:
+  profiles: dev
+  application:
+    name: com.deng.springcloud-provider-dept
+server:
+  port: 8201
+#服务注册
+eureka:
+  client:
+    service-url:
+      defaultZone: http://dengweirongEureka7003.com:7003/eureka/,http://dengweirongEureka7002.com:7002/eureka/,http://dengweirongEureka7001.com:7001/eureka/
+---
+spring:
+  profiles: test
+  application:
+    name: com.deng.springcloud-provider-dept
+server:
+  port: 8202
+#服务注册
+eureka:
+  client:
+    service-url:
+      defaultZone: http://dengweirongEureka7003.com:7003/eureka/,http://dengweirongEureka7002.com:7002/eureka/,http://dengweirongEureka7001.com:7001/eureka/
